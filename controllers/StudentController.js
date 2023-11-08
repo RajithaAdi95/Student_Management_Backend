@@ -59,7 +59,7 @@ exports.update_student_details = (req, res, next) => {
                 joined_date: req.body.joined_date,
                 courses: req.body.courses
             })
-            StudentModel.updateOne({ _id: req.params.id }, student_details)
+            StudentModel.updateOne({ _id: req.params.studentId }, student_details)
             .then(() => {
                 res.status(201).json({
                     message: "Successfully updated the student details!"
